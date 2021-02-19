@@ -48,7 +48,7 @@ const printResponse = element => {
 
 document.querySelector('#find').addEventListener('click',e => {
     e.preventDefault()
-    let namePokemon = document.forms[0]['name'].value
+    let namePokemon = document.forms[0]['name'].value.toLowerCase()
     console.log(namePokemon)
     consultPokemon(namePokemon)
         .then(response => printResponse(response))
