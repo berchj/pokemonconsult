@@ -33,6 +33,9 @@ div.data ul {
     margin: 0 auto;    
     padding: 0;
 }
+div.logo img {
+    width: 100%;
+}
 @media(max-width:720px){
     form{
         width: 80%;
@@ -68,6 +71,11 @@ div.data ul {
     div.images_container > ul  img {
         width: 90.5%;
     }
+    ol.game_appears{
+        font-size: 12px;
+        column-count: 2;
+    }
+
 }
 
 

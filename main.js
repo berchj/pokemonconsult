@@ -42,7 +42,7 @@ const printResponse = element => {
                     </div>  
                     <h3>Game appears</h3>
                     <div class="games">
-                        <ul class="game_appears"></ul>
+                        <ol class="game_appears"></ol>
                     </div>    
                 </div>
                 `    
@@ -59,9 +59,9 @@ const printResponse = element => {
         const game_indices = element['game_indices'][i];           
         let html2 = 
                     `
-                        <li>${game_indices['version']['name']}</li>                                                                
+                        <li> - ${game_indices['version']['name']}</li>                                                                
                     `
-        document.querySelector('ul.game_appears').innerHTML += html2    
+        document.querySelector('ol.game_appears').innerHTML += html2    
     }
 }
 
