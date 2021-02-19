@@ -63,10 +63,10 @@ div.data ul {
         margin: 0 auto;
     }
     div.images_container > ul{
-        display: inline-flex;
+        display: flex;
     }
-    div.images_container > ul > img {
-        width: 20%;
+    div.images_container > ul  img {
+        width: 90.5%;
     }
 }
 
