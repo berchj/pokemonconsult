@@ -20,29 +20,48 @@ const printResponse = element => {
     let html = 
                 `
                 <div class="pokemon">
-                    <h3>${element['name']}</h3>
-                    <h5>Body characteristics</h5>                                                 
+                    <h2>${element['name']}</h2>
+                    <h3>Body characteristics</h3>                                                 
                     <ul>                
                         <li><b>Height:</b> ${element['height']}</li>
                         <li><b>Weight:</b> ${element['weight']}</li>                                        
+                        <li><b>Type:</b> ${element['types'][0]['type']['name']}</li>  
                     </ul>
-                    <h5>Images</h5>                            
-                    <ul>                
-                        <li><img src="${element['sprites']['front_default']}"></li>
-                        <li><img src="${element['sprites']['back_default']}"></li>                                        
-                    </ul>
-                    <h5>Abilities</h5>     
+                    <h3>Images</h3>  
+                    <div class="images_container">                          
+                        <ul class="images">                
+                            <li><img src="${element['sprites']['front_default']}"></li>
+                            <li><img src="${element['sprites']['back_default']}"></li>
+                            <li><img src="${element['sprites']['front_shiny']}"></li>                                        
+                            <li><img src="${element['sprites']['back_shiny']}"></li>                                        
+                        </ul>
+                    </div>
+                    <h3>Abilities</h3>
+                    <div class="abilities">
+                        <ul class="abilities_list"></ul>   
+                    </div>  
+                    <h3>Game appears</h3>
+                    <div class="games">
+                        <ul class="game_appears"></ul>
+                    </div>    
                 </div>
                 `    
     document.querySelector('div.data').innerHTML = html
     for (let i = 0; i < element['abilities'].length; i++) {
         const abilities = element['abilities'][i];
-        let html1 = `                    
-                    <ul>                
-                        <li>${abilities['ability']['name']}</li>                                                                
-                    </ul> 
+        let html1 = 
+                    `                                                      
+                        <li>${abilities['ability']['name']}</li>                                                                                  
                     `      
-        document.querySelector('div.pokemon').innerHTML += html1
+        document.querySelector('ul.abilities_list').innerHTML += html1
+    }
+    for (let i = 0; i < element['game_indices'].length; i++) {
+        const game_indices = element['game_indices'][i];           
+        let html2 = 
+                    `
+                        <li>${game_indices['version']['name']}</li>                                                                
+                    `
+        document.querySelector('ul.game_appears').innerHTML += html2    
     }
 }
 

@@ -59,6 +59,15 @@ div.data ul {
         margin: 0 auto;    
         padding: 0;
     }
+    div.images_container{        
+        margin: 0 auto;
+    }
+    div.images_container > ul{
+        display: inline-flex;
+    }
+    div.images_container > ul > img {
+        width: 20%;
+    }
 }
 
 
