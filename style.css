@@ -1,0 +1,64 @@
+body{
+    background-color: red;
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFF;
+    font-weight: bold;
+}
+form{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+}
+form input,label{    
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+form > label {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+form > input {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+div.data {
+    text-align: center;    
+}
+div.data ul {
+    list-style: none;
+    width: 30%;
+    margin: 0 auto;    
+    padding: 0;
+}
+@media(max-width:720px){
+    form{
+        width: 80%;
+    }
+    form input,label{    
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    form > label {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    form > input {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    #find{
+        width: 60%;
+    }
+    div.data ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;    
+        padding: 0;
+    }
+}
+
+
